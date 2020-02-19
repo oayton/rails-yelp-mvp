@@ -2,8 +2,10 @@
   <%= simple_form_for restaurant do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
+    <%= f.input :description %>
     <%= f.input :phone_number %>
     <%= f.input :category %>
     <%= f.submit %>
+    <%= link_to "Cancel", root_path %>
   <% end %>
 </div>

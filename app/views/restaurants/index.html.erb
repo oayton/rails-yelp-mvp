@@ -4,11 +4,8 @@
 <ol>
   <% @restaurants.each do |restaurant| %>
     <li>
-      <%= link_to restaurant.name, restaurant_path(restaurant) %>
-      <%= restaurant[:address] %>
-      <%= restaurant[:phone_number] %>
-      <%= restaurant[:category] %>
-      <%= restaurant[:address] %>
+      <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+      <p><%= restaurant[:description] %></p>
     </li>
   <% end %>
 </ol>
