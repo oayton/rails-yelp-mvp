@@ -1,0 +1,29 @@
+<br>
+
+<h2 class="m-16"><%= @restaurant[:name] %> (<%= @restaurant[:address] %>)</h2>
+
+<div class="container">
+  <p><%= @restaurant[:address] %></p>
+  <p><%= @restaurant[:phone_number] %></p>
+  <p><%= @restaurant[:category].capitalize %></p>
+  <p><%= @restaurant[:address] %></p>
+</div>
+
+<%= link_to "Delete", restaurant_path(@restaurant),
+      method: :delete,
+      data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+<%= link_to "Go Home", root_path, class: 'btn btn-primary'  %>
+<%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant), class: 'btn btn-primary' %>
+
+<h2>Reviews</h2>
+<ul>
+  <% @reviews.each do |r| %>
+    <li>
+      <p><%= r.content %></p>
+      <p><strong><%= r.content %></strong></p>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add a Review", new_restaurant_review_path(@restaurant) %>

@@ -12,6 +12,10 @@
   </head>
 
   <body>
+    <div class="navbar navbar-light bg-light">
+      <button type="button" class="btn btn-light"><%= link_to "Yelp", root_path %></button>
+      <button type="button" class="btn btn-light"><%= link_to "New Restaurant", new_restaurant_path %></button>
+    </div>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

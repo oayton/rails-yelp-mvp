@@ -1,0 +1,14 @@
+<h1> Welcome to Yelp! </h1>
+
+
+<ol>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%= restaurant[:address] %>
+      <%= restaurant[:phone_number] %>
+      <%= restaurant[:category] %>
+      <%= restaurant[:address] %>
+    </li>
+  <% end %>
+</ol>
